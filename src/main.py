@@ -129,6 +129,8 @@ async def main(page: ft.Page):
                 await page.get_by_role("group", name="Descrição física(300)[ ? ]").locator("input[name=\"b\"]").fill(INFO[11])
                 await page.get_by_role("group", name="Descrição física(300)[ ? ]").locator("input[name=\"c\"]").click()
                 await page.get_by_role("group", name="Descrição física(300)[ ? ]").locator("input[name=\"c\"]").fill(INFO[12])
+                await page.locator("fieldset:nth-child(10) > .subfields > .subfield > .value > .finput").click()
+                await page.locator("fieldset:nth-child(10) > .subfields > .subfield > .value > .finput").fill(INFO[13])
                 await page.locator("input[name=\"holding_count\"]").click()
                 await page.locator("input[name=\"holding_count\"]").fill(photograph.controls[1].value)#type:ignore
                 await page.evaluate("CatalogingInput.saveRecord();")
@@ -229,7 +231,7 @@ async def main(page: ft.Page):
     
 Baseando-se na imagem da página do livro, escreva APENAS e UNICAMENTE, sem textos adicionais, as seguintes informações, separadas por paragrafo. A seguir, está a lista das inforações que você deve buscar:
 
-titulo_principal
+título_principal
 autor
 isbn
 cdu
@@ -242,6 +244,7 @@ ano
 paginas
 il
 dimencoes
+assunto_tópico
 
 Para que não haja confusões: ano é o ano de publicação do livro, il é se o material é ilustrativo. Note que o nome deve estar na seguinte forma: [último sobrenome], [nome completo antes do último sobrenome]. NÃO escreva qual informação é qual, apenas deixe em ordem dos parágrafos. Se tiver edição, apenas escreva seu número SEM pontos (estraga a formatação).
 Caso a página não apresente alguma das informações acima, você deve escrever: Não tem
