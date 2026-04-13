@@ -39,7 +39,7 @@ async def main(page: ft.Page):
                 user_data_dir = "bot"
                 context = await p.chromium.launch_persistent_context(
                     user_data_dir,
-                    headless=head.value,
+                    headless= not head.value,
                     args=["--disable-blink-features=AutomationControlled"]
                 )
 
@@ -221,7 +221,7 @@ async def main(page: ft.Page):
         bgcolor='green',
         color = 'white',
         on_click = SubmitHandler,
-        disabled=True if sended else False
+        disabled=False if sended else True
     )   
 
     tutorial = '''Primeiramente, pegue uma ia de sua preferência (que tenha suporte para imagens) e coloque esse promt, junto de uma foto da página das informações de um livro de demonstração:
