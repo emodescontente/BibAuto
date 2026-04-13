@@ -221,7 +221,7 @@ async def main(page: ft.Page):
         bgcolor='green',
         color = 'white',
         on_click = SubmitHandler,
-        disabled=False if sended else True
+        disabled=False if not sended else True
     )   
 
     tutorial = '''Primeiramente, pegue uma ia de sua preferência (que tenha suporte para imagens) e coloque esse promt, junto de uma foto da página das informações de um livro de demonstração:
