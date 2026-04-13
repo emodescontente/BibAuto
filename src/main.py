@@ -46,7 +46,7 @@ async def main(page: ft.Page):
                 page = context.pages[0]
                 await page.goto(ailink.value.strip())
 
-                if prepare:
+                if prepare.value:
                     await page.wait_for_timeout(80000)
 
                 await expect(page.locator("[data-test-id='side-nav-menu-button']")).to_be_visible(timeout=60000)
@@ -106,7 +106,7 @@ async def main(page: ft.Page):
                 await page.get_by_role("group", name="Assunto - Nome pessoal(600").get_by_role("textbox").click()
                 await page.get_by_role("group", name="Assunto - Nome pessoal(600").get_by_role("textbox").fill(INFO[1])
                 await page.get_by_role("group", name="ISBN(020)[ ? ]").get_by_role("textbox").click()
-                await page.get_by_role("group", name="ISBN(020)[ ? ]").get_by_role("textbox").fill(INFO[2] if INFO[2] != '' else photograph.controls[2].value)#type:ignore
+                await page.get_by_role("group", name="ISBN(020)[ ? ]").get_by_role("textbox").fill(INFO[2] if INFO[2] != 'Não tem' else photograph.controls[2].value)#type:ignore
                 await page.get_by_role("group", name="Classificação Decimal Universal(080)[ ? ]").get_by_role("textbox").click()
                 await page.get_by_role("group", name="Classificação Decimal Universal(080)[ ? ]").get_by_role("textbox").fill(INFO[3])
                 await page.get_by_role("group", name="Classificação Decimal Dewey(").get_by_role("textbox").click()
