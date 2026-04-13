@@ -133,6 +133,9 @@ async def main(page: ft.Page):
                 await page.locator("input[name=\"holding_count\"]").fill(photograph.controls[1].value)#type:ignore
                 await page.evaluate("CatalogingInput.saveRecord();")
                 print('Cadastrado.')
+
+        sended = False
+        photos.controls.clear()
                 
 
     def PackageMix(e): #Não achei outro nome

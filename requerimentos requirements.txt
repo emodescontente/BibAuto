@@ -1,0 +1,5 @@
+Flet
+CMD: pip instal flet
+
+Playwright
+CMD: pip instal playwright
