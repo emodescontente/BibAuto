@@ -63,7 +63,7 @@ async def main(page: ft.Page):
 
                 respostas_antes = await page.locator('message-content').count()
                 await page.get_by_role("textbox", name="Insira um comando para o").get_by_role("paragraph").click()
-                await page.get_by_role("textbox", name="Insira um comando para o").fill("Siga os mesmos comandos do último pront")
+                await page.get_by_role("textbox", name="Insira um comando para o").fill("Siga os mesmos comandos")
 
                 await page.get_by_role("button", name="Enviar mensagem").click()
 
@@ -93,9 +93,9 @@ async def main(page: ft.Page):
 
                 await page.goto(biblivrehost.value.strip())
                 await page.get_by_role("textbox", name="Usuário").click()
-                await page.get_by_role("textbox", name="Usuário").fill("gabriel")
+                await page.get_by_role("textbox", name="Usuário").fill(user.value)
                 await page.get_by_role("textbox", name="Senha").click()
-                await page.get_by_role("textbox", name="Senha").fill("gabgab")
+                await page.get_by_role("textbox", name="Senha").fill(password.value)
                 await page.get_by_role("button", name="Entrar").click()
                 await page.goto(biblivrehost.value.strip())
                 await page.get_by_text("Novo registro").click()
