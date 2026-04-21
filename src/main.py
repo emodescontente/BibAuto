@@ -219,8 +219,6 @@ Caso a página não apresente alguma das informações acima, você deve escreve
     tutorial = '''Primeiramente, consiga uma chave API do gemini no site ai.dev
 Feito isso, vá na área de Configurações, copie e cole o código da chave na caixa Chave API do Google Gemini.
 Agora, na mesma área, coloque a URL do biblivre na área da Catalogação Bibliográfica, em seguida do seu usuário e senha. Clique em Salvar.
-Agora, ligue a opção Prepação, coloque alguma imagem na área de Cadastrar, aperte em Enviar, vá na área Enviar e aperte em Cadastrar, uma janela do chrome deve se abrir.
-Nela, dê login com a conta do Google da conversa da ia e saia. Pode desligar a opção Prepação.
 Esses são os passos necessários para começar a automação. Note que essas informações são salvas localmente.
 
 
@@ -273,7 +271,6 @@ Quando satisfeito, vá na área Mandar e clique em Cadastrar. Aguarde o processo
                                     password,
                                     ft.Button('Salvar', on_click = Save),
                                     head := ft.Switch(label='Abrir browser quando rodar', value = configuracoes['config'][4]),
-                                    prepare := ft.Switch(label='Preparação')
                                 ]
                             ), 
                         ),
