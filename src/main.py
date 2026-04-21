@@ -216,33 +216,8 @@ Caso a página não apresente alguma das informações acima, você deve escreve
         disabled=False if not sended else True
     )   
 
-    tutorial = '''Primeiramente, pegue uma ia de sua preferência (que tenha suporte para imagens) e coloque esse promt, junto de uma foto da página das informações de um livro de demonstração:
-
-    
-Baseando-se na imagem da página do livro, escreva APENAS e UNICAMENTE, sem textos adicionais, as seguintes informações, separadas por paragrafo. A seguir, está a lista das inforações que você deve buscar:
-
-título_principal
-autor
-isbn
-cdu
-cdd
-autor_codigo
-edicao
-local
-editor
-ano
-paginas
-il
-dimencoes
-assunto_tópico
-
-Para que não haja confusões: ano é o ano de publicação do livro, il é se o material é ilustrativo. Note que o nome deve estar na seguinte forma: [último sobrenome], [nome completo antes do último sobrenome]. NÃO escreva qual informação é qual, apenas deixe em ordem dos parágrafos. Se tiver edição, apenas escreva seu número SEM pontos (estraga a formatação).
-Caso a página não apresente alguma das informações acima, você deve escrever: Não tem
-
-
-O promt está em um arquivo de texto nos arquivos do app.
-É confirmado que funciona no Gemini, mas não em outras ias. Se quiser um porte específico, entre em cotato comigo via GitHub.
-Feito isso, vá na área de Configurações, copie e cole a URL da conversa da Ia na caixa: URL para Ia.
+    tutorial = '''Primeiramente, consiga uma chave API do gemini no site ai.dev
+Feito isso, vá na área de Configurações, copie e cole o código da chave na caixa Chave API do Google Gemini.
 Agora, na mesma área, coloque a URL do biblivre na área da Catalogação Bibliográfica, em seguida do seu usuário e senha. Clique em Salvar.
 Agora, ligue a opção Prepação, coloque alguma imagem na área de Cadastrar, aperte em Enviar, vá na área Enviar e aperte em Cadastrar, uma janela do chrome deve se abrir.
 Nela, dê login com a conta do Google da conversa da ia e saia. Pode desligar a opção Prepação.
