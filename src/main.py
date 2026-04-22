@@ -74,6 +74,7 @@ Caso a página não apresente alguma das informações acima, você deve escreve
             await page.get_by_role("textbox", name="Usuário").fill(user.value)
             await page.get_by_role("textbox", name="Senha").fill(password.value)
             await page.get_by_role("button", name="Entrar").click()
+            await page.goto(biblivrehost.value.strip())
 
             for photograph in photos.controls: 
                 image_path = photograph.controls[0].src
