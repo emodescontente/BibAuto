@@ -1,6 +1,5 @@
 import flet as ft
 from playwright.async_api import async_playwright, expect
-import time
 import json
 import geminiAPI as API
 
@@ -86,7 +85,6 @@ Caso a página não apresente alguma das informações acima, você deve escreve
 
                 await page.goto(biblivrehost.value.strip())
                 await page.get_by_text("Novo registro").click()
-                time.sleep(1)
                 await page.get_by_role("group", name="Título principal(245)[ ? ]").get_by_role("textbox").fill(INFO[0])
                 await page.get_by_role("group", name="Autor - Nome pessoal(100)[ ? ]").get_by_role("textbox").fill(INFO[1])
                 await page.get_by_role("group", name="Assunto - Nome pessoal(600").get_by_role("textbox").fill(INFO[1])
