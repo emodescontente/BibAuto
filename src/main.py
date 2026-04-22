@@ -74,7 +74,6 @@ Caso a página não apresente alguma das informações acima, você deve escreve
             await page.get_by_role("textbox", name="Usuário").fill(user.value)
             await page.get_by_role("textbox", name="Senha").fill(password.value)
             await page.get_by_role("button", name="Entrar").click()
-            await page.goto(biblivrehost.value.strip())
 
             for photograph in photos.controls: 
                 image_path = photograph.controls[0].src
@@ -87,7 +86,7 @@ Caso a página não apresente alguma das informações acima, você deve escreve
 
                 await page.goto(biblivrehost.value.strip())
                 await page.get_by_text("Novo registro").click()
-                
+                time.sleep(1)
                 await page.get_by_role("group", name="Título principal(245)[ ? ]").get_by_role("textbox").fill(INFO[0])
                 await page.get_by_role("group", name="Autor - Nome pessoal(100)[ ? ]").get_by_role("textbox").fill(INFO[1])
                 await page.get_by_role("group", name="Assunto - Nome pessoal(600").get_by_role("textbox").fill(INFO[1])
