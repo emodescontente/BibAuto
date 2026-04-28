@@ -93,7 +93,7 @@ Caso a página não apresente alguma das informações acima, você deve escreve
                 await page.get_by_role("group", name="ISBN(020)[ ? ]").get_by_role("textbox").fill(str(isbn_value))
                 
                 await page.get_by_role("group", name="Classificação Decimal Universal(080)[ ? ]").get_by_role("textbox").fill(INFO[3])
-                await page.get_by_role("group", name="Classificação Decimal Dewey(082).get_by_role("textbox").fill(INFO[4])
+                await page.get_by_role("group", name="Classificação Decimal Dewey(082)".get_by_role("textbox").fill(INFO[4])
                 
                 chamada_group = page.get_by_role("group", name="Número de chamada - Localização")
                 await chamada_group.locator("input[name=\"a\"]").fill(INFO[4])
